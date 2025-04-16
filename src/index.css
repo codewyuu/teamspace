@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Notion-inspired light theme */
+    --background: 0 0% 100%;
+    --foreground: 220 14% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14% 10%;
+
+    --primary: 220 14% 10%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 38% 95%;
+    --secondary-foreground: 220 14% 10%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 211 100% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.3rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Notion-inspired dark theme */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 213 31% 91%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 211 100% 65%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 213 31% 91%;
+    --sidebar-primary: 211 100% 65%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --sidebar-accent: 223 47% 11%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 211 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+  }
+}
+
+@layer utilities {
+  .notion-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6;
+  }
+  
+  .notion-card {
+    @apply bg-card/30 backdrop-blur-sm border border-border rounded-md hover:shadow-sm transition-all duration-200;
+  }
+  
+  .notion-title {
+    @apply text-2xl font-bold tracking-tight;
+  }
+  
+  .notion-button {
+    @apply bg-transparent hover:bg-secondary rounded px-3 py-1.5 text-sm transition-colors duration-200;
+  }
+  
+  .notion-input {
+    @apply bg-background/50 border border-border rounded px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-accent w-full;
+  }
+  
+  .notion-table {
+    @apply w-full border-collapse;
+  }
+  
+  .notion-table th {
+    @apply text-left text-muted-foreground text-sm font-medium py-2 px-3;
+  }
+  
+  .notion-table td {
+    @apply py-2 px-3 border-t border-border;
+  }
+  
+  .notion-tag {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  
+  .glassmorphism {
+    @apply bg-background/70 backdrop-blur-md border border-border/60;
+  }
+}
