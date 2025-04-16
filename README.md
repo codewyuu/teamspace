@@ -1,4 +1,4 @@
-# Welcome to your teamspace project
+# Welcome to project teamspace
 
 ## Project info
 
